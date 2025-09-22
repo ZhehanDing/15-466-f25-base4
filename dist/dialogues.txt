@@ -1,0 +1,377 @@
+start: game_start
+
+state: game_start
+text:
+<<<
+Lost in Beach
+>>>
+option: Time to explore -> intro1
+
+state: intro1
+text:
+<<<
+You just won the lottery for a free trip to a European small sea village called Gravenmire. 
+The name meant nothing to you when you first read it — tucked away somewhere between rocky cliffs 
+and gray waters, far from any map you’d ever studied.
+
+>>>
+option: How luck I am!!. -> intro2
+option: [LOCKED] Nah, not this time. -> true_end
+
+state: intro2
+text:
+<<<
+The prize promised "peace, salt air, and timeless charm." 
+After months of city smog and noise, it sounded like a dream to you. 
+>>>
+option: Let's go! -> intro3
+option: [LOCKED] Seems like a spam. -> true_end
+
+state: intro3
+text:
+<<<
+The ride here was long, and the truck that dropped me off rattled like it had survived a dozen wars. 
+When the driver left, you are alone… standing in front of the beach.
+>>>
+option: Walk around beach -> intro4
+option: Go back to town -> intro6
+
+
+state: intro4
+text:
+<<<
+The ocean stretched before you — cold, endless, and strangely still.
+You are about to breathe in the sea air when you noticed it: 
+A blurred shadow standing on the water itself, unmoving, 
+its edges rippling like smoke caught between this world and another.
+>>>
+option: Run away. -> intro5
+option: Close your eye. -> intro5
+option: Walk into the ocean for clean vision. -> intro5
+
+
+state: intro5
+text:
+<<<
+You feel something cold get into you head, and start to hear whisper.
+>>>
+option: Scream!!!. -> r1
+option: Scream!!!. -> r1
+option: Scream!!!. -> r1
+
+
+state: intro6
+text:
+<<<
+You try to find way back to the town, 
+but the fog make you lose the direction, 
+you walk back to the beach now.
+>>>
+option: Walk around beach -> intro4
+option: Go back to town -> intro6
+
+state: r1
+text:
+<<<
+You wake up in a soft bed inside an old seaside hotel, 
+the air thick with salt and mildew.  
+On the table rests a rusted key marked *Room 6*, 
+and outside the window, the waves sound almost like whispers.
+>>>
+option: Look out the window -> r2
+option: Go down stair -> r3
+option: Try to go back to sleep -> r4
+
+state: r2
+text:
+<<<
+You push the window open wider, 
+and a cold gust carries the brine of the sea into your room.  
+Far out on the water, 
+a blurred figure stands unmoving on the waves, and you heard "2".
+>>>
+option: Call out to it -> r5
+option: Shut the window quickly -> r6
+
+state: r3
+text:
+<<<
+The wooden stairs creak under your feet as you descend into the lobby.  
+The place is empty except for a cracked reception desk and the faint smell of wet earth drifting in.  
+>>>
+option: Ring the dusty bell -> r7
+option: Step outside -> r8
+
+state: r4
+text:
+<<<
+You roll back into the bed, 
+clutching the thin blanket.  
+Sleep comes fast, 
+but your dreams are filled with drowning whispers and pale hands reaching from the sea. 
+>>>
+option: Jolt awake in terror -> r9
+option: Let the dream carry you -> r9
+
+state: r5
+text:
+<<<
+You shout across the waves, 
+but your voice comes back doubled, 
+as if echoed by something inside your own head.  
+The figure lifts one arm, 
+and the wind hisses a single word: “One.”  
+>>>
+option: Keep calling -> r13
+option: Retreat from the window -> r14
+
+
+state: r6
+text:
+<<<
+You slam the window shut, 
+the glass rattling in its old frame.  
+For a moment the room is silent,
+but then a faint knocking begins from inside the walls.  
+>>>
+option: Investigate the sound -> r15
+option: Run out of the room -> r3
+
+state: r7
+text:
+<<<
+You tap the dusty bell, 
+and its chime echoes far too long, 
+vibrating in your bones.  
+From behind the desk, 
+something shifts — not a person, 
+but a wet, 
+pale hand dragging itself into view.  
+>>>
+option: If you know it’s poison, then there's no point drinking it. -> r10
+option: Maybe it’s better to let someone else drink it. -> r12
+
+state: r8
+text:
+<<<
+You step outside into the fog, 
+the lamps flickering with a sickly yellow glow.  
+The crawling shapes emerge — their limbs bend backward, 
+eyes rolling white, and their teeth gnash in rhythm with the sea.
+>>>
+option: Run away -> intro6
+
+state: r9
+text:
+<<<
+You find yourself are inside of the gray ocean, 
+you can clear see the blurred figure now, 
+a towering shape with hundred arms, 
+thousand pure white fish eyes around them.
+>>>
+option: Swim away -> r11  
+option: Try to wake up -> r11  
+
+state: r10
+text:
+<<<
+The pale hand rises, 
+dragging a figure slick with seawater, 
+its skin bloated and split like drowned flesh.  
+A mouth rips open across its chest, 
+letting out a gurgling hymn of the deep.
+>>>
+option: Run upstairs -> r18
+option: Let it see you -> r19
+
+state: r11
+text:
+<<<
+You tried your best to do, it didn't work.
+Ancient howl go through ice-cold water, 
+like them fill up your empty lung.
+>>>
+option: [You Drowned in the grey ocean.] -> game_start
+
+
+state: r12
+text:
+<<<
+The hand withdraws, 
+leaving behind a glass brimming with black water that reeks of brine.  
+In its surface, 
+your reflection grins madly, 
+blood running from your eyes. 
+>>>
+option: Drink the black water -> r11
+option: Smash the glass -> r20
+
+
+state: r13
+text:
+<<<
+You keep calling, louder, 
+your throat burning.  
+The blurred figure lowers its arm. 
+The word “Zero” rattles through your skull.  
+The window glass splinters as if struck from the outside.
+You open your eyes wide.   
+>>>
+option: [You become one of them] -> game_start
+option: Stay frozen and watch -> r19
+
+state: r14
+text:
+<<<
+You stagger back from the window, 
+heart hammering.  
+The whispers don’t stop — they follow you across the room, 
+seeping through the floorboards.  
+The key on the table vibrates, 
+rattling against the wood.  
+>>>
+option: Pick up the key -> r21  
+option: Leave the room immediately -> r3
+
+state: r15
+text:
+<<<
+You press your ear to the wall.  
+The knocking grows louder, 
+until it sounds like something is inside with you.  
+A crack splits across the plaster, 
+and a pale, lidless eye stares out.  
+>>>
+option: Tear open the wall -> r22  
+option: Run for the stairs -> r3
+
+state: r18
+text:
+<<<
+You rush back upstairs, 
+stumbling into the hallway.  
+The wallpaper peels as if rotting before your eyes, 
+and every door reads *Room 6*.  
+No matter which handle you grasp, 
+the corridor twists back to where you started.  
+>>>
+option: Keep running -> r23  
+option: Collapse and wait -> r24
+
+state: r19
+text:
+<<<
+The drowned figure notices you.  
+It smiles with too many teeth, 
+and whispers slip straight into your skull:  
+“You cannot leave.”  
+Your vision flickers, and you are back at the window, 
+staring at the blurred figure on the sea.  
+>>>
+option: Surrender to the vision -> r25  
+option: Fight to close your eyes -> r9
+
+state: r20
+text:
+<<<
+The glass shatters in your hand, 
+black water spilling like oil across the floor.  
+The liquid slithers instead of pooling, 
+crawling back toward the door as if alive.  
+>>>
+option: Follow the trail -> r23  
+option: Stay and watch -> r24
+
+state: r21
+text:
+<<<
+The key is freezing cold, 
+biting into your palm.  
+Numbers swirl in your mind — 6, 2, 0, 1 — before dissolving into whispers.  
+You feel a compulsion to go back outside to the beach.  
+>>>
+option: Obey the pull -> r26  
+option: Resist -> r23
+
+state: r22
+text:
+<<<
+You rip open the wall, 
+and a rush of saltwater floods out.  
+The eye blinks once, then vanishes into the torrent.  
+The room drowns in gray water, pulling you toward the sea.
+>>>
+option: Let it drag you -> r1  
+option: Try to swim against it -> r11
+
+state: r23
+text:
+<<<
+You wander, hallways bending and stretching, 
+each step echoing like you walk inside a seashell.  
+The fog curls in through cracks in the wood, 
+and before long you’re back at the beach again.  
+>>>
+option: Wait at the beach -> r26  
+option: Walk into the sea -> r1
+
+state: r24
+text:
+<<<
+You sink to the floor, body trembling, 
+while the whispers rise into a chorus.  
+When you open your eyes, 
+you are already sitting at the edge of the beach, 
+the tide brushing your feet.  
+>>>
+option: Keep waiting -> r26  
+option: Step forward -> r1
+
+state: r25
+text:
+<<<
+The whispers become silence.  
+When you open your eyes, the hotel, 
+the window, 
+even the sea is gone.  
+You stand on the empty beach, 
+waiting… and waiting.  
+>>>
+option: Continue waiting -> r26
+option: Walk into the sea -> r1  
+
+state: r26
+text:
+<<<
+You wait 5 mintues...
+You wait 10 mintues...
+You wait 30 mintues...
+You wait 1 hour...
+You wait 2 hour...
+You wait 5 hour...
+You wait 10 hour...
+>>>
+option: Continue waiting -> end
+option: Walk into the sea -> r1
+
+state: end
+text:
+<<<
+You decide to continue wait in here, wait for that ancient one shows up.
+You don't feel hungry, you just sit there and wait.
+Sun raise and down over and over.
+You can't feel you hand and feet gradually, you mind stop thinking.
+You become part of the beach.
+>>>
+option: Is there a way to get out? -> game_start
+
+state: true_end
+text:
+<<<
+You just don't want to go that trip, 
+the best move is to not move.
+You prevent everything before it happened.
+You survive.
+Congratulation!
+>>>
+option: Restart -> game_start

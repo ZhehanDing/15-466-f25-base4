@@ -156,7 +156,9 @@ const game_names = [
 	//maek.CPP('ColorTextureProgram.cpp'),  //not used right now, but you might want it
 	maek.CPP('Sound.cpp'),
 	maek.CPP('load_wav.cpp'),
-	maek.CPP('load_opus.cpp')
+	maek.CPP('load_opus.cpp'),
+	maek.CPP('TextHB.cpp'),
+	maek.CPP('Dialogue.cpp')
 ];
 
 const common_names = [
@@ -279,7 +281,7 @@ function init_maek() {
 	}
 
 	if (maek.OS === 'windows') {
-		DEFAULT_OPTIONS.CPP = ['cl.exe', '/nologo', '/EHsc', '/Z7', '/std:c++20', '/W4', '/WX', '/MD'];
+		DEFAULT_OPTIONS.CPP = ['cl.exe', '/nologo', '/EHsc', '/Z7', '/std:c++20', '/W4', '/MD'];
 		//TODO: could embed manifest to set UTF8 codepage
 		DEFAULT_OPTIONS.LINK = ['link.exe', '/nologo', '/SUBSYSTEM:CONSOLE', '/DEBUG:FASTLINK', '/INCREMENTAL:NO'];
 	} else if (maek.OS === 'linux') {

@@ -1,7 +1,11 @@
+//Credit: jialand
+//reference: https://github.com/jialand/TheMuteLift/tree/main, https://github.com/arililoia-cmu/15-466-f23-base4
 #include "Mode.hpp"
 
 #include "Scene.hpp"
 #include "Sound.hpp"
+#include "TextHB.hpp"
+#include "Dialogue.hpp"
 
 #include <glm/glm.hpp>
 
@@ -44,6 +48,18 @@ struct PlayMode : Mode {
 
 	//car honk sound:
 	std::shared_ptr< Sound::PlayingSample > honk_oneshot;
+
+	std::unique_ptr<TextHB> text;
+	// Dialogue runtime:
+    DialogueGraph dialog;
+    std::string cur_state;   // current node id
+    int selected = 0;        // highlighted option index
+    bool finished = false;   // reached END
+	bool key = false; //true end trigger
+
+    // Helpers:
+    void move_selection(int delta);
+    void confirm_selection();
 	
 	//camera:
 	Scene::Camera *camera = nullptr;
